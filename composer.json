@@ -1,0 +1,40 @@
+{
+    "name": "pishran/nova-rtl-theme",
+    "description": "RTL layout for Laravel Nova.",
+    "keywords": [
+        "laravel",
+        "nova",
+        "rtl",
+        "theme"
+    ],
+    "homepage": "https://github.com/pishran/nova-rtl-theme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Farid Aghili",
+            "email": "farid@pishranit.ir",
+            "homepage": "https://www.faridaghili.ir",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pishran\\NovaRtlTheme\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pishran\\NovaRtlTheme\\ThemeServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

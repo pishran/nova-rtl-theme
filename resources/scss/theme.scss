@@ -1,0 +1,56 @@
+@import 'https://cdn.rawgit.com/rastikerdar/vazir-font/v19.2.0/dist/font-face.css';
+
+html, button, input, optgroup, select, textarea, .chartist-tooltip, .font-sans, .font-serif {
+    font-family: 'Vazir', serif;
+}
+
+body, li, th, td, table, div, h1, h2, h3, h4, h5, h6, a, span, input, label {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.ml-auto {
+    margin-left: unset !important;
+    margin-right: auto !important;
+}
+
+@for $i from 0 through 12 {
+    .ml-#{$i} {
+        margin-left: unset !important;
+        margin-right: #{$i*0.25}rem !important;
+    }
+
+    .mr-#{$i} {
+        margin-right: unset !important;
+        margin-left: #{$i*0.25}rem !important;
+    }
+}
+
+.text-left {
+    text-align: right;
+}
+
+.pl-search {
+    padding-left: unset !important;
+    padding-right: 2.75rem;
+}
+
+.dropdown-menu-right {
+    right: unset !important;
+    left: 0 !important;
+}
+
+.dropdown-menu-left {
+    left: unset !important;
+    right: 0 !important;
+}
+
+.sidebar-icon {
+    margin-right: unset !important;
+    margin-left: .75rem;
+}
+
+.dropdown-right {
+    right: unset !important;
+    left: 20px !important;
+}
