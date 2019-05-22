@@ -18,6 +18,10 @@ class ThemeServiceProvider extends ServiceProvider
         Nova::serving(function (ServingNova $event) {
             Nova::style('nova-rtl-theme', __DIR__.'/../resources/css/theme.css');
         });
+
+        $this->publishes([
+            __DIR__.'/../resources/fonts' => public_path('vendor/nova-rtl-theme'),
+        ], 'public');
     }
 
     /**
