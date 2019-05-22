@@ -21,7 +21,7 @@ class ThemeServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../resources/fonts' => public_path('vendor/nova-rtl-theme'),
-        ], 'public');
+        ], 'nova-rtl-theme');
     }
 
     /**
