@@ -6,8 +6,12 @@
 
 برای نصب و استفاده از این پکیج می توانید از کمپوسر استفاده کنید:
 
-`composer require pishran/nova-rtl-theme`
+```bash
+composer require pishran/nova-rtl-theme
+```
 
 فونت های مورد استفاده را منتشر کنید
 
-`php artisan vendor:publish --tag=nova-rtl-theme`
+```bash
+php artisan vendor:publish --tag=nova-rtl-theme
+```
