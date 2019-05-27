@@ -112,7 +112,32 @@ body, li, th, td, table, div, h1, h2, h3, h4, h5, h6, a, span, input, label {
   left: 20px !important;
 }
 
+/* Toast */
 .toasted-container.bottom-right {
   right: unset !important;
   left: 5%;
+}
+
+/* BelongsTo : searchable */
+div[dusk*="-search-input"] .form-select {
+  padding-right: .75rem;
+  background-position: center left .75rem;
+}
+
+/* KeyValue : rows */
+div.flex.flex-grow.border-b.border-50 > div.flex-grow.border-l.border-50 {
+  border-left-width: 0;
+  border-right-width: 1px;
+}
+
+/* KeyValue : delete */
+div.flex.items-center > div.flex.justify-center.h-11.w-11.absolute {
+  right: unset !important;
+  left: -50px;
+}
+
+/* Image : hidden input */
+input[type="file"].form-file-input {
+  position: unset;
+  float: left;
 }
