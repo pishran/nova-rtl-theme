@@ -2,9 +2,9 @@
 
 namespace Pishran\NovaRtlTheme;
 
-use Laravel\Nova\Nova;
-use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Nova\Events\ServingNova;
+use Laravel\Nova\Nova;
 
 class ThemeServiceProvider extends ServiceProvider
 {
@@ -16,11 +16,20 @@ class ThemeServiceProvider extends ServiceProvider
     public function boot()
     {
         Nova::serving(function (ServingNova $event) {
+            Nova::provideToScript([
+                'nova_rtl_theme' => [
+                    'stylesheet' => config('nova-rtl-theme.stylesheet'),
+                    'font_family' => config('nova-rtl-theme.font-family'),
+                ],
+            ]);
+
             Nova::style('nova-rtl-theme', __DIR__.'/../resources/css/theme.css');
+
+            Nova::script('nova-rtl-theme', __DIR__.'/../resources/js/theme.js');
         });
 
         $this->publishes([
-            __DIR__.'/../resources/fonts' => public_path('vendor/nova-rtl-theme'),
+            __DIR__.'/../config/nova-rtl-theme.php' => config_path('nova-rtl-theme.php'),
         ], 'nova-rtl-theme');
     }
 
@@ -31,6 +40,8 @@ class ThemeServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/nova-rtl-theme.php', 'nova-rtl-theme'
+        );
     }
 }
