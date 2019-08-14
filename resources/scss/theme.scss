@@ -78,3 +78,14 @@ input[type="file"].form-file-input {
     position: unset;
     float: left;
 }
+
+/* Ebess\AdvancedNovaMediaLibrary\Fields\Images */
+gallery .gallery-item {
+    float: right !important;
+}
+
+/* Trix*/
+trix-toolbar .trix-button-group:not(:first-child) {
+    margin-left: unset !important;;
+    margin-right: 1.5vw;
+}
