@@ -1,7 +1,9 @@
 body, li, th, td, table, div, h1, h2, h3, h4, h5, h6, a, span, input, label {
     direction: rtl !important;
 }
-
+.CodeMirror * {
+    direction: ltr !important;
+}
 .ml-auto {
     margin-left: unset !important;
     margin-right: auto !important;
