@@ -99,3 +99,14 @@ trix-toolbar .trix-button-group:not(:first-child) {
 .CodeMirror * {
     direction: ltr !important;
 }
+
+/* Popups */
+div.tooltip[x-placement='top-start'],
+div.tooltip[x-placement='bottom-start'] {
+    left: 220px !important;
+}
+
+div.tooltip[x-placement='top-end'],
+div.tooltip[x-placement='bottom-end'] {
+    left: -200px !important;
+}
