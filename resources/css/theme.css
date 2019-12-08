@@ -211,10 +211,10 @@ trix-toolbar .trix-button-group:not(:first-child) {
 
 div.tooltip[x-placement='top-start'],
 div.tooltip[x-placement='bottom-start'] {
-    left: 220px !important;
+    left: 224px !important;
 }
 
 div.tooltip[x-placement='top-end'],
 div.tooltip[x-placement='bottom-end'] {
-    left: -200px !important;
+    left: -196px !important;
 }

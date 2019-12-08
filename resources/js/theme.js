@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var style = document.createElement('style');
         style.type = 'text/css';
         var css = '#' + popupId + '{' +
-            'left: 108px !important;' +
+            'left: 112px !important;' +
             '}';
         style.appendChild(document.createTextNode(css));
         head.appendChild(style);
