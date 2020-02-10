@@ -218,3 +218,8 @@ div.tooltip[x-placement='top-end'],
 div.tooltip[x-placement='bottom-end'] {
     left: -196px !important;
 }
+
+.ct-chart {
+    right: unset !important;
+    left: 20px;
+}

@@ -110,3 +110,9 @@ div.tooltip[x-placement='top-end'],
 div.tooltip[x-placement='bottom-end'] {
     left: -196px !important;
 }
+
+/* Trend chart */
+.ct-chart {
+    right: unset !important;
+    left: 20px;
+}
