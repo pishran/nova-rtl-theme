@@ -223,3 +223,8 @@ div.tooltip[x-placement='bottom-end'] {
     right: unset !important;
     left: 20px;
 }
+
+.tags-input-remove {
+    margin-left: unset;
+    margin-right: .25rem;
+}

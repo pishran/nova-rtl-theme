@@ -116,3 +116,9 @@ div.tooltip[x-placement='bottom-end'] {
     right: unset !important;
     left: 20px;
 }
+
+/* Spatie\TagsField\Tags */
+.tags-input-remove {
+    margin-left: unset;
+    margin-right: .25rem;
+}
