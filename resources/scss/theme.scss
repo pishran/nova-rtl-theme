@@ -23,29 +23,16 @@ body, li, th, td, table, div, h1, h2, h3, h4, h5, h6, a, span, input, label {
     text-align: right;
 }
 
+/* Global search placeholder text */
 .pl-search {
     padding-left: unset !important;
     padding-right: 2.75rem;
 }
 
-.dropdown-menu-right {
-    right: unset !important;
-    left: 0 !important;
-}
-
-.dropdown-menu-left {
-    left: unset !important;
-    right: 0 !important;
-}
-
+/* Resource list icon */
 .sidebar-icon {
     margin-right: unset !important;
     margin-left: .75rem;
-}
-
-.dropdown-right {
-    right: unset !important;
-    left: 20px !important;
 }
 
 /* Toast */
@@ -80,7 +67,7 @@ input[type="file"].form-file-input {
 }
 
 /* Ebess\AdvancedNovaMediaLibrary\Fields\Images */
-gallery .gallery-item {
+.gallery .gallery-item {
     float: right !important;
 }
 
@@ -98,17 +85,6 @@ trix-toolbar .trix-button-group:not(:first-child) {
 /* Code : CodeMirror */
 .CodeMirror * {
     direction: ltr !important;
-}
-
-/* Popups */
-div.tooltip[x-placement='top-start'],
-div.tooltip[x-placement='bottom-start'] {
-    left: 224px !important;
-}
-
-div.tooltip[x-placement='top-end'],
-div.tooltip[x-placement='bottom-end'] {
-    left: -196px !important;
 }
 
 /* Trend chart */

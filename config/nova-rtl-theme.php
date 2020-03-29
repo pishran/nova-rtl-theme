@@ -2,8 +2,8 @@
 
 return [
 
-    'stylesheet' => 'https://cdn.rawgit.com/rastikerdar/vazir-font/v21.2.0/dist/font-face.css',
+    'stylesheet' => 'https://cdn.rawgit.com/rastikerdar/vazir-font/v24.1.0/dist/font-face.css',
 
-    'font-family' => 'Vazir, Tahoma, serif',
+    'font-family' => 'Vazir, Tahoma, sans-serif',
 
 ];
