@@ -38,9 +38,11 @@ function fixPopover() {
             popovers.forEach(popover => {
 
                 setTimeout(() => {
+                    const placement = popover.getAttribute('x-placement');
                     const translate3d = extractTransformValues(popover.style.transform)
-                    const parent = document.querySelector(`[aria-describedby=${popover.id}]`)
-                    styleSheet.insertRule(`#${popover.id} {transform: translate3d(${parent.getBoundingClientRect().left}px, ${translate3d[1]}, ${translate3d[2]}) !important;}`)
+                    const translateX = distanceFromLeft(popover, placement, popOverParent(popover.id))
+
+                    styleSheet.insertRule(`#${popover.id} {transform: translate3d(${translateX}px, ${translate3d[1]}, ${translate3d[2]}) !important;}`)
                 }, 0)
             })
         });
@@ -57,5 +59,17 @@ function fixPopover() {
             .replace(/\(|\)/g, '')
             .split(",")
             .map(a => a.trim());
+    }
+
+    function popOverParent(id) {
+        return document.querySelector(`[aria-describedby=${id}]`);
+    }
+
+    function distanceFromLeft(popover, placement, popoverParent) {
+        const boundaries = popoverParent.getBoundingClientRect()
+
+        return placement.indexOf('start') > 0 ?
+            boundaries.left :
+            boundaries.left + popoverParent.clientWidth - popover.clientWidth;
     }
 }
