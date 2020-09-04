@@ -1,62 +1,51 @@
-init();
-
-function init() {
-    overrideStyles();
-    fixPopover();
-}
+overrideStyles();
+fixPopover();
 
 function overrideStyles() {
-    var head = document.head;
-
-    var link = document.createElement('link');
+    const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.type = 'text/css';
     link.href = window.config.nova_rtl_theme.stylesheet;
-    head.appendChild(link);
 
-    var style = document.createElement('style');
-    style.type = 'text/css';
-    var css = 'html, button, input, optgroup, select, textarea, .chartist-tooltip, .font-sans, .font-serif {' +
+    const style = document.createElement('style');
+    const css = 'html, button, input, optgroup, select, textarea, .chartist-tooltip, .font-sans, .font-serif {' +
         'font-family: ' + window.config.nova_rtl_theme.font_family + ';' +
         '}';
     style.appendChild(document.createTextNode(css));
+
+    const head = document.head;
+    head.appendChild(link);
     head.appendChild(style);
 }
 
 function fixPopover() {
+    document.addEventListener('DOMContentLoaded', () => {
+            const styleSheet = document.styleSheets[0];
 
-    document.addEventListener('DOMContentLoaded', adjustRtlTheme)
+            const observer = new MutationObserver(() => {
+                const popovers = document.querySelectorAll("[id^='popover']")
 
-    function adjustRtlTheme() {
-        const body = document.querySelector('body');
-        const config = {childList: true, subtree: true};
-        const styleSheet = document.styleSheets[0];
+                popovers.forEach(popover => {
+                    setTimeout(() => {
+                        const placement = popover.getAttribute('x-placement');
+                        const translate3d = extractTransformValues(popover.style.transform)
+                        const translateX = distanceFromLeft(popover, placement, popOverParent(popover.id))
 
-        const observer = new MutationObserver(() => {
-            const popovers = document.querySelectorAll("[id^='popover']")
+                        styleSheet.insertRule(`#${popover.id} {transform: translate3d(${translateX}px, ${translate3d[1]}, ${translate3d[2]}) !important;}`)
+                    }, 0)
+                })
+            });
 
-            popovers.forEach(popover => {
-
-                setTimeout(() => {
-                    const placement = popover.getAttribute('x-placement');
-                    const translate3d = extractTransformValues(popover.style.transform)
-                    const translateX = distanceFromLeft(popover, placement, popOverParent(popover.id))
-
-                    styleSheet.insertRule(`#${popover.id} {transform: translate3d(${translateX}px, ${translate3d[1]}, ${translate3d[2]}) !important;}`)
-                }, 0)
-            })
-        });
-
-        observer.observe(body, config)
-    }
+            const body = document.querySelector('body');
+            observer.observe(body, {childList: true, subtree: true})
+        }
+    )
 
     function extractTransformValues(transform) {
-
         const translateRegex = /translate3d\(.*\)/;
         const extractedTranslate = transform.match(translateRegex)[0];
 
         return extractedTranslate.match(/\(.*\)/)[0]
-            .replace(/\(|\)/g, '')
+            .replace(/[()]/g, '')
             .split(",")
             .map(a => a.trim());
     }
