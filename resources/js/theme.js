@@ -1,5 +1,6 @@
 overrideStyles();
 fixPopover();
+fixLens();
 
 function overrideStyles() {
     const link = document.createElement('link');
@@ -22,21 +23,21 @@ function fixPopover() {
             const styleSheet = document.styleSheets[0];
 
             const observer = new MutationObserver(() => {
-                const popovers = document.querySelectorAll("[id^='popover']")
+                const popovers = document.querySelectorAll('[id^="popover"]');
 
                 popovers.forEach(popover => {
                     setTimeout(() => {
                         const placement = popover.getAttribute('x-placement');
-                        const translate3d = extractTransformValues(popover.style.transform)
-                        const translateX = distanceFromLeft(popover, placement, popOverParent(popover.id))
+                        const translate3d = extractTransformValues(popover.style.transform);
+                        const translateX = distanceFromLeft(popover, placement, popOverParent(popover.id));
 
-                        styleSheet.insertRule(`#${popover.id} {transform: translate3d(${translateX}px, ${translate3d[1]}, ${translate3d[2]}) !important;}`)
-                    }, 0)
-                })
+                        styleSheet.insertRule(`#${popover.id} {transform: translate3d(${translateX}px, ${translate3d[1]}, ${translate3d[2]}) !important;}`);
+                    }, 0);
+                });
             });
 
             const body = document.querySelector('body');
-            observer.observe(body, {childList: true, subtree: true})
+            observer.observe(body, {childList: true, subtree: true});
         }
     )
 
@@ -55,10 +56,28 @@ function fixPopover() {
     }
 
     function distanceFromLeft(popover, placement, popoverParent) {
-        const boundaries = popoverParent.getBoundingClientRect()
+        const boundaries = popoverParent.getBoundingClientRect();
 
         return placement.indexOf('start') > 0 ?
             boundaries.left :
             boundaries.left + popoverParent.clientWidth - popover.clientWidth;
     }
+}
+
+function fixLens() {
+    document.addEventListener('DOMContentLoaded', () => {
+            const content = document.querySelector('.content');
+
+            const observer = new MutationObserver(() => {
+                const back = document.querySelector('[data-testid="lens-back"]');
+                if (back !== null) {
+                    observer.disconnect();
+                    back.innerText = '→';
+                    observer.observe(content, {childList: true, subtree: true});
+                }
+            });
+
+            observer.observe(content, {childList: true, subtree: true});
+        }
+    )
 }
