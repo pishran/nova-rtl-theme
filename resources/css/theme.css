@@ -137,6 +137,136 @@ body, li, th, td, table, div, h1, h2, h3, h4, h5, h6, a, span, input, label {
     margin-left: 3rem !important;
 }
 
+.pl-0 {
+	padding-left: unset !important;
+	padding-right: 0rem !important;
+}
+
+.pr-0 {
+	padding-right: unset !important;
+	padding-left: 0rem !important;
+}
+
+.pl-1 {
+	padding-left: unset !important;
+	padding-right: 0.25rem !important;
+}
+
+.pr-1 {
+	padding-right: unset !important;
+	padding-left: 0.25rem !important;
+}
+
+.pl-2 {
+	padding-left: unset !important;
+	padding-right: 0.5rem !important;
+}
+
+.pr-2 {
+	padding-right: unset !important;
+	padding-left: 0.5rem !important;
+}
+
+.pl-3 {
+	padding-left: unset !important;
+	padding-right: 0.75rem !important;
+}
+
+.pr-3 {
+	padding-right: unset !important;
+	padding-left: 0.75rem !important;
+}
+
+.pl-4 {
+	padding-left: unset !important;
+	padding-right: 1rem !important;
+}
+
+.pr-4 {
+	padding-right: unset !important;
+	padding-left: 1rem !important;
+}
+
+.pl-5 {
+	padding-left: unset !important;
+	padding-right: 1.25rem !important;
+}
+
+.pr-5 {
+	padding-right: unset !important;
+	padding-left: 1.25rem !important;
+}
+
+.pl-6 {
+	padding-left: unset !important;
+	padding-right: 1.5rem !important;
+}
+
+.pr-6 {
+	padding-right: unset !important;
+	padding-left: 1.5rem !important;
+}
+
+.pl-7 {
+	padding-left: unset !important;
+	padding-right: 1.75rem !important;
+}
+
+.pr-7 {
+	padding-right: unset !important;
+	padding-left: 1.75rem !important;
+}
+
+.pl-8 {
+	padding-left: unset !important;
+	padding-right: 2rem !important;
+}
+
+.pr-8 {
+	padding-right: unset !important;
+	padding-left: 2rem !important;
+}
+
+.pl-9 {
+	padding-left: unset !important;
+	padding-right: 2.25rem !important;
+}
+
+.pr-9 {
+	padding-right: unset !important;
+	padding-left: 2.25rem !important;
+}
+
+.pl-10 {
+	padding-left: unset !important;
+	padding-right: 2.5rem !important;
+}
+
+.pr-10 {
+	padding-right: unset !important;
+	padding-left: 2.5rem !important;
+}
+
+.pl-11 {
+	padding-left: unset !important;
+	padding-right: 2.75rem !important;
+}
+
+.pr-11 {
+	padding-right: unset !important;
+	padding-left: 2.75rem !important;
+}
+
+.pl-12 {
+	padding-left: unset !important;
+	padding-right: 3rem !important;
+}
+
+.pr-12 {
+	padding-right: unset !important;
+	padding-left: 3rem !important;
+}
+
 .text-left {
     text-align: right;
 }
@@ -202,4 +332,9 @@ trix-toolbar .trix-button-group:not(:first-child) {
 .tags-input-remove {
     margin-left: unset;
     margin-right: 0.25rem;
+}
+
+.sortable-handle {
+    left: unset;
+    right: -5px;
 }

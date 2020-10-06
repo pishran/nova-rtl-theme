@@ -19,6 +19,18 @@ body, li, th, td, table, div, h1, h2, h3, h4, h5, h6, a, span, input, label {
     }
 }
 
+@for $i from 0 through 12 {
+    .pl-#{$i} {
+        padding-left: unset !important;
+        padding-right: #{$i*0.25}rem !important;
+    }
+
+    .pr-#{$i} {
+        padding-right: unset !important;
+        padding-left: #{$i*0.25}rem !important;
+    }
+}
+
 .text-left {
     text-align: right;
 }
@@ -97,4 +109,10 @@ trix-toolbar .trix-button-group:not(:first-child) {
 .tags-input-remove {
     margin-left: unset;
     margin-right: .25rem;
+}
+
+/* NovaItemsField\Items */
+.sortable-handle {
+    left: unset;
+    right: -5px;
 }
