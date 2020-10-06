@@ -56,7 +56,7 @@ body, li, th, td, table, div, h1, h2, h3, h4, h5, h6, a, span, input, label {
 /* BelongsTo */
 div[dusk*="-search-input"] .form-select,
 select.form-select {
-    padding-right: .75rem;
+    padding-right: .75rem !important;
     background-position: center left .75rem;
 }
 
