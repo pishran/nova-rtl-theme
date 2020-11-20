@@ -17,9 +17,9 @@ composer require pishran/nova-rtl-theme
 
 ## تنظیمات - Configuration
 
-Publish the config file to use your preferred font
+Publish the config file to use your preferred font or enable/disable RTL theme based on locale.
 
-فایل تنظیمات را منتشر کنید تا بتوانید از فونت دلخواه استفاده کنید
+فایل تنظیمات را منتشر کنید تا بتوانید از فونت دلخواه استفاده کرده و فعال یا غیرفعال بودن تم راست به چپ را کنترل نمایید
 
 ```bash
 php artisan vendor:publish --tag=nova-rtl-theme --force
