@@ -338,3 +338,13 @@ trix-toolbar .trix-button-group:not(:first-child) {
     left: unset;
     right: -5px;
 }
+
+.relationship-tabs-panel .tab-content > div > .relative > .flex {
+    right: unset !important;
+    left: 0;
+}
+
+.relationship-tabs-panel .tab-content > div > .relative > .flex > .w-full {
+    margin-left: unset !important;
+    margin-right: 1.5rem;
+}
