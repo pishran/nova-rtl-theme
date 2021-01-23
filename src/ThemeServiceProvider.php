@@ -15,7 +15,7 @@ class ThemeServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (in_array(app()->getLocale(), config('nova-rtl-theme.locales'))) {
+        if (in_array(app()->getLocale(), config('nova-rtl-theme.locales', []))) {
             Nova::serving(function (ServingNova $event) {
                 Nova::provideToScript([
                     'nova_rtl_theme' => [
