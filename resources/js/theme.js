@@ -27,12 +27,14 @@ function fixPopover() {
 
                 popovers.forEach(popover => {
                     setTimeout(() => {
+                        if (popOverParent(popover.id) === null) return;
+                        
                         const placement = popover.getAttribute('x-placement');
                         const translate3d = extractTransformValues(popover.style.transform);
                         const translateX = distanceFromLeft(popover, placement, popOverParent(popover.id));
 
                         styleSheet.insertRule(`#${popover.id} {transform: translate3d(${translateX}px, ${translate3d[1]}, ${translate3d[2]}) !important;}`);
-                    }, 0);
+                    }, 50);
                 });
             });
 
