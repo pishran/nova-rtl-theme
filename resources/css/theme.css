@@ -348,3 +348,7 @@ trix-toolbar .trix-button-group:not(:first-child) {
     margin-left: unset !important;
     margin-right: 1.5rem;
 }
+
+.select-box-sm {
+    background-position: center left .55rem;
+}
