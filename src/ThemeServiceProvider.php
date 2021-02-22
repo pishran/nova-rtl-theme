@@ -24,9 +24,9 @@ class ThemeServiceProvider extends ServiceProvider
                     ],
                 ]);
 
-                Nova::style('nova-rtl-theme', __DIR__ . '/../resources/css/theme.css');
+                Nova::style('nova-rtl-theme', __DIR__.'/../resources/css/theme.css');
 
-                Nova::script('nova-rtl-theme', __DIR__ . '/../resources/js/theme.js');
+                Nova::script('nova-rtl-theme', __DIR__.'/../resources/js/theme.js');
             }
         });
 
