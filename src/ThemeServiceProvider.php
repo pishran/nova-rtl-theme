@@ -15,8 +15,8 @@ class ThemeServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (in_array(app()->getLocale(), config('nova-rtl-theme.locales', []))) {
-            Nova::serving(function (ServingNova $event) {
+        Nova::serving(function (ServingNova $event) {
+            if (in_array(app()->getLocale(), config('nova-rtl-theme.locales', []))) {
                 Nova::provideToScript([
                     'nova_rtl_theme' => [
                         'stylesheet' => config('nova-rtl-theme.stylesheet'),
@@ -24,11 +24,11 @@ class ThemeServiceProvider extends ServiceProvider
                     ],
                 ]);
 
-                Nova::style('nova-rtl-theme', __DIR__.'/../resources/css/theme.css');
+                Nova::style('nova-rtl-theme', __DIR__ . '/../resources/css/theme.css');
 
-                Nova::script('nova-rtl-theme', __DIR__.'/../resources/js/theme.js');
-            });
-        }
+                Nova::script('nova-rtl-theme', __DIR__ . '/../resources/js/theme.js');
+            }
+        });
 
         $this->publishes([
             __DIR__.'/../config/nova-rtl-theme.php' => config_path('nova-rtl-theme.php'),
