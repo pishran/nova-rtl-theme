@@ -352,3 +352,7 @@ trix-toolbar .trix-button-group:not(:first-child) {
 .select-box-sm {
     background-position: center left .55rem;
 }
+.collapsible-indicator {
+    right: 60px !important;
+}
+
