@@ -356,3 +356,7 @@ trix-toolbar .trix-button-group:not(:first-child) {
     right: 60px !important;
 }
 
+.breadcrumbs__item a:after{
+    position: inherit !important;
+}
+
