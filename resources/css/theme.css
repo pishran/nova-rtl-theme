@@ -352,3 +352,11 @@ trix-toolbar .trix-button-group:not(:first-child) {
 .select-box-sm {
     background-position: center left .55rem;
 }
+.router-link-active{
+    margin-left: unset !important;
+    margin-right: 2rem !important;
+}
+
+.breadcrumbs .breadcrumbs__item a:after, .breadcrumbs .breadcrumbs__item span:after{
+    position: inherit !important;
+}
