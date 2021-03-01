@@ -131,3 +131,13 @@ trix-toolbar .trix-button-group:not(:first-child) {
 .select-box-sm {
     background-position: center left .55rem;
 }
+
+/* dcasia/collapsible-resource-manager */
+.collapsible-indicator {
+    right: 60px !important;
+}
+
+/* chris-ware/nova-breadcrumbs */
+.breadcrumbs__item a:after{
+    position: inherit !important;
+}
