@@ -138,6 +138,108 @@ trix-toolbar .trix-button-group:not(:first-child) {
 }
 
 /* chris-ware/nova-breadcrumbs */
-.breadcrumbs__item a:after{
+.breadcrumbs__item a:after {
     position: inherit !important;
+}
+
+/* optimistdigital/nova-multiselect-field */
+.multiselect__spinner {
+    right: unset;
+    left: 1px;
+}
+
+.multiselect__spinner:after, .multiselect__spinner:before {
+    left: unset;
+    right: 50%;
+    margin: -8px -8px 0 0;
+    border-top-color: var(--primary);
+}
+
+.multiselect {
+    text-align: right;
+}
+
+.multiselect--active .multiselect__select {
+    transform: rotate(-180deg)
+}
+
+.multiselect__input, .multiselect__single {
+    padding: 0 5px 0 0;
+}
+
+.multiselect__single {
+    padding-left: unset;
+    padding-right: 5px;
+}
+
+.multiselect__tags {
+    padding: 8px 8px 0 40px;
+}
+
+.multiselect__tag {
+    padding: 4px 10px 4px 26px;
+    margin-right: unset;
+    margin-left: 10px;
+    background: var(--primary);
+}
+
+.multiselect__tag-icon {
+    margin-left: unset;
+    margin-right: 7px;
+    right: unset;
+    left: 0;
+}
+
+.multiselect__tag-icon:after {
+    color: var(--primary-dark);
+}
+
+.multiselect__tag-icon:focus, .multiselect__tag-icon:hover {
+    background: var(--info);
+}
+
+.multiselect__current {
+    padding: 8px 12px 0 30px;
+}
+
+.multiselect__select {
+    right: unset;
+    left: 1px;
+}
+
+.multiselect__select:before {
+    right: unset;
+    left: 0;
+    top: 73%;
+}
+
+.multiselect__option:after {
+    right: unset;
+    left: 0;
+    padding-left: 12px;
+    padding-right: 20px;
+}
+
+.multiselect__option--highlight {
+    background: var(--primary);
+}
+
+.multiselect__option--highlight:after {
+    background: var(--primary);
+}
+
+.multiselect__option--selected.multiselect__option--highlight {
+    background: var(--danger);
+}
+
+.multiselect__option--selected.multiselect__option--highlight:after {
+    background: var(--danger);
+}
+
+.multiselect__option--group-selected.multiselect__option--highlight {
+    background: var(--danger);
+}
+
+.multiselect__option--group-selected.multiselect__option--highlight:after {
+    background: var(--danger);
 }
