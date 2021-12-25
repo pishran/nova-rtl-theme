@@ -100,8 +100,8 @@ trix-toolbar .trix-button-group:not(:first-child) {
     direction: ltr !important;
 }
 
-/* Trend chart */
-.ct-chart {
+/* Partition Metrics */
+.card-panel .min-h-90px .ct-chart {
     right: unset !important;
     left: 20px;
 }

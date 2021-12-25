@@ -325,7 +325,7 @@ trix-toolbar .trix-button-group:not(:first-child) {
     direction: ltr !important;
 }
 
-.ct-chart {
+.card-panel .min-h-90px .ct-chart {
     right: unset !important;
     left: 20px;
 }
