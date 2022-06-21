@@ -1,5 +1,7 @@
 # Nova RTL Theme
 
+## This package is for Nova 3.*, for Nova 4 you don't need this package, as Nova supports RTL layout as of v4.10.0.
+
 Right to left (RTL) layout for Laravel Nova
 
 قالب بندی راست به چپ برای لاراول نوا
